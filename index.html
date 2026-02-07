@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Online - Live Flúor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <h1>RADIO ONLINE</h1>
+            </div>
+            
+        </header>
+
+        <div class="main-grid">
+            <section class="player-section">
+                <h2 class="section-title"><i class="fas fa-play-circle"></i> EN VIVO</h2>
+                <div class="youtube-player">
+                    <iframe 
+                        id="youtubePlayer" 
+                        src="https://www.youtube.com/embed/videoseries?list=UU7-Z_1p2M7Oq6O8_j3XQ9fA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="player-info">
+                    <div id="currentSong">Transmitiendo contenido de Graciela Taborda</div>
+                    <div class="current-dj"><i class="fas fa-user-circle"></i>  en Directo</div>
+                </div>
+            </section>
+
+            <section class="chat-section">
+                <h2 class="section-title"><i class="fas fa-comments"></i> CHAT EN VIVO</h2>
+                <div class="chat-container">
+                    <div id="chatMessages" class="chat-messages"></div>
+                    <form id="chatForm" class="chat-input-container">
+                        <input type="text" id="messageInput" placeholder="Escribe un mensaje..." required autocomplete="off">
+                        <button type="submit" id="sendBtn">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+      <section class="ads-section">
+    <h2 class="section-title"><i class="fas fa-star"></i> NUESTROS SPONSORS</h2>
+    <div class="ad-carousel-container">
+        <div id="adCarousel" class="ad-carousel">
+            
+            <div class="ad-slide collage">
+                <img src="collage1.jpg" alt="1">
+                <img src="collage2.jpg" alt="2">
+                <img src="collage3.jpg" alt="3">
+            </div>
+
+            <div class="ad-slide collage">
+                <img src="collage4.jpg" alt="4">
+                <img src="collage5.jpg" alt="5">
+                <div style="width:100%"></div> 
+            </div>
+
+        </div>
+    </div>
+</section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
